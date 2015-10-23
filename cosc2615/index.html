@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+    <script src="../assets/js/example.js"></script>
+    <script src="../assets/js/quiz.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/mindmap.css">
+    <link rel="stylesheet" href="../assets/css/theme.css">
+  </head>
+  <body>
+<div class="container-full">
+
+      <div class="navbar navbar-default">
+         <div class="navbar-header">
+          <a class="navbar-brand" href="#">Adv Prof Development</a>
+        </div>
+        <div class="navbar-collapse collapse" ng-controller="ModalQuizCtrl">
+            <ul class="nav navbar-nav">
+              <li></li>
+            </ul>
+          </div>
+      </div>
+      <div class="text-center" ng-controller="ModalDemoCtrl">
+        <h3>Advance Professional Development</h3>
+        <div class="adv">
+          <div id="adv-ch1">
+      	      <div class="node node_root">
+        	         <div class="node__text">Week 1</div>
+        	     </div>
+        	    <ol ng-include="'ch1/branch.html'" class="children children_rightbranch"></ol>
+          </div>
+          <div id="adv-ch2">
+              <div class="node node_root">
+                   <div class="node__text">Week 2</div>
+               </div>
+               <ol ng-include="'ch2/branch.html'" class="children children_rightbranch"></ol>
+          </div>
+          <div id="adv-ch3">
+              <div class="node node_root">
+                   <div class="node__text">Week 3</div>
+               </div>
+               <ol ng-include="'ch3/branch.html'" class="children children_rightbranch"></ol>
+          </div>
+        </div>
+      </div>
+</div>
+</body>
+</html>
