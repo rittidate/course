@@ -10,23 +10,115 @@
     <link rel="stylesheet" href="../assets/css/theme.css">
   </head>
   <body>
-<div class="container-full">
+<div class="container-full" ng-controller="ModalDemoCtrl">
 
       <div class="navbar navbar-default">
          <div class="navbar-header">
-          <a class="navbar-brand" href="#">Grammar Diagram</a>
+          <a class="navbar-brand" href="#">Algorithm and Analysis</a>
         </div>
-        <div class="navbar-collapse collapse" ng-controller="ModalQuizCtrl">
+        <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#" ng-click="open('', 'quiz/modal.html')">Quiz</a></li>
+              <li><a href="#" ng-click="open('', 'efficiency/detail/formula_con.html')">Formula</a></li>
             </ul>
           </div>
       </div>
-      <div class="text-center" ng-controller="ModalDemoCtrl">
-        <h3>Types of sentence</h3>
-        <div ng-include="'detail/sentence.html'"></div>
-        <h3>Structure of simple sentence</h3>
-        <div ng-include="'detail/structure.html'"></div>
+      <div class="text-center">
+        <h3>Algorithm and analysis</h3>
+        <div class="alg">
+          <div id="alg_the">
+      	      <div class="node node_root">
+        	         <div class="node__text">Theoretical Algorithm</div>
+        	     </div>
+        	    <ol class="children children_rightbranch">
+                <li class="children__item">
+                	<div class="node node_navy">
+                	<div class="node__text" ng-click="open('', 'type/detail/problem.html')">Problems types</div>
+                	</div>
+                  <ol ng-include="'type/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                  <div class="node node_navy">
+                  <div class="node__text" ng-click="open('', 'adt/detail/adt.html')">Fundamental Abstract data types (ADTS)</div>
+                  </div>
+                  <ol ng-include="'adt/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                  <div class="node node_navy">
+                  <div class="node__text" ng-click="open('', 'data/detail/data.html')">Data structures</div>
+                  </div>
+                  <ol ng-include="'data/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                  <div class="node node_navy">
+                  <div class="node__text" ng-click="open('', 'efficiency/detail/data.html')">Analysis of Algorithm Efficiency</div>
+                  </div>
+                  <ol ng-include="'efficiency/branch.html'" class="children"></ol>
+                </li>
+              </ol>
+          </div>
+          <h3>Algorithm solutions</h3>
+          <div id="alg_problem">
+            <div class="node node_root">
+                 <div class="node__text">Algorithm problems</div>
+             </div>
+             <ol class="children children_rightbranch">
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'brute/detail/problem.html')">Brute force algorithm</div>
+                 </div>
+                  <ol ng-include="'brute/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'decrease/detail/problem.html')">Decrease-and-Conquer</div>
+                 </div>
+                  <ol ng-include="'decrease/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'divide/detail/problem.html')">Divide-and-Conquer</div>
+                 </div>
+                  <ol ng-include="'divide/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'transform/detail/problem.html')">Transform-and-Conquer</div>
+                 </div>
+                  <ol ng-include="'transform/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'time/detail/problem.html')">Time and Space tradeoffs</div>
+                 </div>
+                  <ol ng-include="'time/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'match/detail/problem.html')">Matching algorithms</div>
+                 </div>
+                  <ol ng-include="'match/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'time2/detail/problem.html')">Time and Space tradeoffs II</div>
+                 </div>
+                  <ol ng-include="'time2/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'dynamic/detail/problem.html')">Dynamic programming</div>
+                 </div>
+                  <ol ng-include="'dynamic/branch.html'" class="children"></ol>
+                </li>
+                <li class="children__item">
+                 <div class="node node_navy">
+                 <div class="node__text" ng-click="open('', 'dynamic/detail/problem.html')">Greedy techniques</div>
+                 </div>
+                  <ol ng-include="'greedy/branch.html'" class="children"></ol>
+                </li>
+              </ol>
+          </di>
+        </div>
       </div>
 </div>
 </body>

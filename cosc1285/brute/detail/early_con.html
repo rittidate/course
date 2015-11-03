@@ -1,0 +1,16 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Early-Termination Bubble Sort</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<ul>
+  <li>This modification attempts to reduce redundant passes, by checking if any exchanges takes place in each pass. If there were no exchanges in the current pass, the sorting is stopped after the current pass.</li>
+  <li><b>Best case</b> - when the original file is already sorted, only one pass is needed, n − 1 comparisons, 0 exchanges.</li>
+  <li><b>Worst case</b> - No improvement over the original implementation.</li>
+  <li><b>Average case</b> - Depending on the data set, few passes can be eliminated at the end of the sort. Therefore, the number of passes is less than n − 1, and hence cost is lower than the original implementation. The complexity is still likely to be Θ(n<sup>2</sup>).</li>
+  <li>In the labs you will do an empirical analysis of these two alternatives.</li>
+</ul>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

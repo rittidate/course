@@ -1,0 +1,28 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Closest Pair</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  The closest-pair problem is to find the two closest points in a set of n points in k-dimensional space. We consider a 2 dimensional case of the problem for simplicity. A brute force implementation of this problem computes the distance between each pair of distinct points and finds the pair with the smallest distance.
+</p>
+<pre>
+  Algorithm <b>ClosestPairPoints</b> (P)
+	<b>dmin</b> ← ∞
+	<b>for</b> i ← 1 to  n-1 do
+		<b>for</b> j ← i + 1 to n do
+			d ← sqrt ((xi – xj)<sup>2</sup> + (yi – yj)<sup>2</sup>)
+			<b>if</b> d < dmin
+				<b>dmin</b> ← d
+</pre>
+
+<p>
+  The basic operation of the algorithm is computing the Euclidean distance between two points: d ← sqrt ((xi – xj)<sup>2</sup> + (yi – yj)<sup>2</sup>).<br>
+
+  An improved algorithm would be if we just compare the values (xi – xj) <sup>2</sup> + (yi – yj)<sup>2</sup> instead of taking the square root. The basic operation is dsqr ← (xi – xj)<sup>2</sup> + (yi – yj)<sup>2</sup>.
+
+  The <b>complexity</b> for the algorithm is Θ(n<sup>2</sup>).
+</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

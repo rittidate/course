@@ -1,0 +1,43 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Insertion Sort</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+Insertion sort is the method people often use to sort a hand of playing cards. The basic idea:
+</p>
+<ul>
+  <li>Consider each element one at a time.</li>
+  <li>Insert each element in its proper place among those already considered. (i.e. Insert into a already sorted sub-file).</li>
+  <li>The current element being considered is inserted by moving larger elements one position to the right and then inserting the element into the vacated position.</li>
+</ul>
+<pre>
+  ALGORITHM <b>InsertionSort</b> (A[0 . . . n − 1])
+/* Sort an array using an insertion sort. */
+/* INPUT : An array A[0 . . . n − 1] of orderable elements. */
+/* OUTPUT : An array A[0 . . . n − 1] sorted in ascending order. */
+    <b>for</b> i = 1 to n−1 <b>do</b>
+      v= A[i]
+      j= i−1
+      <b>while</b> j ≥ 0 and A[j] > v <b>do</b>
+        A[j + 1] = A[j]
+        j = j−1
+      <b>end while</b>
+      A[j+1] = v
+    <b>end for</b>
+</pre>
+<ul>
+  <li><b>Worst Case</b> : The input is in descending order.</li>
+      <img class="img-responsive" width="50%" src="decrease/pic/01.png">
+  <li><b>Average Case</b> : For randomly ordered data, we expect each item to move halfway back.</li>
+  <img class="img-responsive" width="50%" src="decrease/pic/02.png">
+  <li><b>Best Case :</b></li>
+  <ul>
+    <li>In terms of the input, what is the scenario/circumstance where we can achieve the best case?</li>
+    <li>What is the time complexity for best case?</li>
+  </ul>
+  <img class="img-responsive" width="50%" src="decrease/pic/03.png">
+</ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

@@ -1,0 +1,16 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">￼Topological Sorting</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+Given a digraph, list its vertices in such an order that for every edge in the graph, the vertex where the edge starts is listed before the vertex where it ends. If the graph is a DAG, the topological sort has at least one solution.
+</p>
+<ul>
+  There are two different approaches to solve this problem:
+  <li><b>DFS Method</b> - Do a depth-first search. Collect the nodes in the order they are popped off of the stack. Reverse the final list.</li>
+  <li><b>Source Removal Method</b> - Arbitrarily choose a node which has no incoming edges. Delete the node and all edges and add the node to list. Repeat the check and delete process until no nodes are left.</li>
+</ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

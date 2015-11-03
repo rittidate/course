@@ -1,0 +1,19 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Knapsack</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+The knapsack problem, for given n items with their benefits and volume, tries to find the most valuable subset (i.e. the one with the greatest benefit) without exceeding the capacity of the knapsack. The solution is one of all subsets of the set of objects and therefore the time efficiency of this algorithm is Θ(2<sup>n</sup>).
+</p>
+<ul>
+  <li>Consider all subsets of the set of n items.</li>
+  <li>Compute the total weight of each subset in order to identify feasible subsets (the ones with the total not exceeding the knapsack’s capacity).</li>
+  <li>Find the subset of the largest value among them.</li>
+  <li>Since the number of subsets of an n-element set is 2n, an exhaustive search produces an Ω(2<sup>n</sup>) algorithm.</li>
+  <li>The exact solution of this problem is NP-Complete – meaning it is believed that no algorithm can be both optimal and use polynomial time for all cases.</li>
+</ul>
+<img class="img-responsive" width="50%" src="brute/pic/05.png">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

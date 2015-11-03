@@ -1,0 +1,31 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Convex-hull</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  The Convex-hull problem tries to find the smallest convex polygon enclosing n points on the plane (i.e. find the points that will serve as vertexes to the polygon).
+</p>
+<ul>
+There are some definitions that need to be made for this problem:
+<li> 1. Convex set: For any two points P and Q in the set, the entire line segment with the end points at P and Q belongs to the set</li>
+<li>2. Convex hull of a set S of points is the smallest convex set containing S</li>
+</ul>
+<p>
+The convex hull of any set S of n > 2 points is a convex polygon with the vertexes at some of the points of S.
+</p>
+<p>
+In the implementation of the problem, for each pair of points p1 and p2, a brute force algorithm determines whether all other points lie to the same side of a straight line through p1 and p2. If so, the line segment connecting p1 and p2 is a part of the convex hull’s boundary.
+</p>
+<pre>
+Algorithm:
+for each of n(n-1)/2 pairs of distinct points
+for each of the other n – 2 points
+find the sign of ax + by – c
+</pre>
+<p>
+The time efficiency of this algorithm is O(n<sup>3</sup>).
+</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

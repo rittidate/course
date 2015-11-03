@@ -1,0 +1,26 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Bubble sort</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  Bubble sort is another application of a brute force. In the algorithm, adjacent elements of the list are compared and are exchanged if they are out of order.
+</p>
+<pre>
+  Algorithm <b>BubbleSort</b> (A[0..n-1])
+  <b>for</b> i ← 0 to  n-2 do
+  	<b>for</b> j ← 0 to n – 2 – i do
+  		<b>if</b> A[j+1] < A[j]
+         <b>swap</b> A[j] and A[j+1]
+</pre>
+<img class="img-responsive" src="brute/pic/02.png">
+<p>
+  The basic operation of the bubble sort is comparison - A[j+1] < A[j] and swapping - swap A[j] and A[j+1].
+  The number of key comparisons is the same for all arrays of size n and it is Θ(n<sup>2</sup>). However, the number of key swaps depends on the input and in the worst case is Θ(n<sup>2</sup>).
+  The above implementation of Bubble sort can be slightly improved if we stop the execution of the algorithm when a pass through the list makes no exchanges (i.e. indicating that the list has been sorted).
+  Thus, in the best case the complexity will be Θ(n) and the worst case Θ(n<sup>2</sup>).
+</p>
+<img class="img-responsive" src="brute/pic/Bubble-sort-example-300px.gif">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

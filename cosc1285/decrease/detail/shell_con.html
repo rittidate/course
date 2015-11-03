@@ -1,0 +1,24 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Shell’s Sort</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+Shell’s Sort is a simple but effective extension of insertion sort.
+</p>
+<ul>
+  <li>Proposition : For partially-sorted arrays, insertion sort runs in linear time.</li>
+  <li>Apply insertion sort to several interleaving sublists of the array.</li>
+  <li>The sublists are formed by stepping through the array with an increment hi which decreases by some predefined increment on eachpass,whereh1 >...>hi >...>1.</li>
+  <li>Choosing the optimal stepping is still an open problem, but the reverse of the sequence 1, 4, 13, 40, 121, 364, . . . (3x + 1) works well in practice.</li>
+</ul>
+<img class="img-responsive" src="decrease/pic/04.png">
+<ul>
+  <li>The worst case number of compares using the 3x + 1 sequence is Θ(n<sup>3/2</sup>).</li>
+  <li>The algorithm is not stable. You should be able to give a counterexample.</li>
+  <li>Quite good performance in practice and is easily used in embedded and even hardware solutions.</li>
+  <li>Simple algorithm, nontrivial performance: What is the best sequence increment? How would you even begin to attempt an average case performance analysis?</li>
+</ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

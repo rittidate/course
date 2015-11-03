@@ -1,0 +1,25 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Sequential search</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+Sequential search in an unordered array and simple sorts – selection sort, bubble sort are brute force algorithms.
+</br>
+Sequential search: the algorithm simply compares successive elements of a given list with a given search key until either a match is found or the list is exhausted without finding a match.
+</p>
+<pre>
+  Algorithm <b>SequentialSearch</b> (A[0..n], K)
+  A[n] ← K
+  	i ← 0
+  	<b>While</b> A [i] ≠ K do
+  		i ← i + 1
+  	<b>if</b>  i < n return i
+  	<b>else</b>  return -1
+</pre>
+<p>
+The complexity of a sequential search algorithm is Θ(n) in the worst possible case and Θ(1) in the best possible case, depending on where the desired element is situated.
+</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

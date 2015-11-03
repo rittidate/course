@@ -1,0 +1,57 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Depth-First Search (DFS)</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+  <p>
+  Depth-First Search (DFS) is a graph traversal algorithm which systematically visits each vertex and edge of a graph G.
+</p>
+<ul>
+  <li>Choose an arbitrary vertex and mark it visited.</li>
+  <li>Proceed to an unvisited, adjacent vertex. If there are several such vertices, break the tie by imposing an ordering on the vertex labels.</li>
+  <li>Continue until a vertex is reached which has no adjacent, unvisited vertices.</li>
+  <li>At each dead-end, backtrace to the last visited vertex and proceed down to the next unvisited, adjacent vertex.</li>
+  <li>The algorithm halts when the starting vertex has no remaining unvisited, adjacent vertices.</li>
+</ul>
+<img class="img-responsive" src="brute/pic/06.png">
+<img class="img-responsive" src="brute/pic/07.png">
+
+<pre>
+  ALGORITHM <b>DFS</b> (G)
+/* Implement a Depth First Traversal of a graph. */
+/* INPUT : Graph G = ⟨V,E⟩ */
+/* OUTPUT : Graph G with its vertices marked with consecutive */ /* integers in initial encounter order. */
+  count ← 0
+  <b>for</b> i ←0 to v <b>do</b>
+    Marked[i] ← 0
+  <b>end for</b>
+  <b>for</b> i ←0 to v <b>do</b>
+  <b>if</b> not Marked[i] <b>then</b>
+    DFSR (i)
+  <b>end if</b>
+  <b>end for</b>
+</pre>
+<pre>
+  ALGORITHM <b>DFSR</b> (v)
+/* Recursively visit all connected vertices. */
+/* INPUT : A starting vertex v */
+/* OUTPUT : Graph G with its vertices marked with consecutive */ /* integers in initial encounter order. */
+  count ← count + 1
+  Marked ← count
+  <b>for</b> v′ ∈ V adjacent to v <b>do</b>
+    <b>if</b> not Marked[v′] <b>then</b>
+      DFSR (v′)
+    <b>end if</b>
+  <b>end for</b>
+</pre>
+<ul>
+<li>A DFS search can be implemented with graphs represented as: </li>
+<li>Adjacency matrices: Θ(V<sup>2</sup>)</li>
+<li>Adjacency lists: Θ(V + E)</li>
+<li>Two distinct orderings of vertices are possible:</li>
+<li>Pre-order: as vertices are first encountered (pushed onto the stack). For our example: { A, B, C, D, F, E }</li>
+<li>Post-order: as vertices become dead-ends (popped off the stack).For our example: {F,D,E,C,B,A}</li>
+</ul>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

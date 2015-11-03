@@ -1,0 +1,36 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Pattern Matching</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  A brute force algorithm for <b>string matching</b> problem has two inputs to be considered: pattern (a string of m characters to search for), and text (a long string of n characters to search in). The algorithm starts with aligning the pattern at the beginning of the text. Then each character of the pattern is compared to the corresponding character, moving from left to right, until all characters are found to match, or a mismatch is detected.
+<br>
+While the pattern is not found and the text is not yet exhausted, the pattern is realigned to one position to the right and again compared to the corresponding character, moving from left to right.
+</p>
+<pre>
+ALGORITHM <b>BrutePM</b>(T[0...n−1],P[0...m−1])
+/* A brute-force exact pattern matching algorithm. */
+/* INPUT : An array T [0 . . . n − 1] of n symbols representing a text and an array of P[0 . . . m − 1] of m symbols representing a pattern. */
+/* OUTPUT : A list O of offsets identifying all matches of P in T . */
+
+    set O = {}
+    <b>for</b> i ← 0 to n−m do
+      <b>set</b> j = 0
+      <b>while</b> j < m and P[j] = T[i+j] do
+          set j = j + 1
+      <b>end</b> while
+      <b>if</b> j = m then
+          APPEND(O,i)
+      <b>end</b> if
+    <b>end</b> for
+    <b>return</b> O
+</pre>
+<img class="img-responsive" src="brute/pic/03.png">
+<p>
+  The number of comparisons done for this problem is Θ(nm) in the worst possible case and Θ(n+m) ≈ Θ(n) in the average case.
+</p>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

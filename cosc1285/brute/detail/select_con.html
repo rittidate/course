@@ -1,0 +1,31 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Selection Sort</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  Selection sort is a brute force solution to the sorting problem.
+  <ul>
+  <li>Scan all n elements of the array to find the smallest element, and swap it with the first element.</li>
+  <li>Starting with the second element, scan the remaining n − 1 elements to find the smallest element and swap it with the element in the second position.</li>
+  <li>Generally, on pass i(0 ≤ i ≤ n − 2), find the smallest element in A[i . . . n − 1] and swap it with A[i ].</li>
+  </ul>
+</p>
+
+<pre>
+  Algorithm <b>SelectionSort</b> (A[0..n-1])
+  <b>for</b> i ← 0 to  n-2 do
+  	min ← i
+  	<b>for</b> j ← i + 1 to n-1 <b>do</b>
+  		<b>if</b> A[j] < A[min]
+                     min ← j
+  	<b>swap</b> A[i] and A[min]
+</pre>
+<img class="img-responsive" src="brute/pic/01.png">
+<p>
+  The basic operation of the selection sort is the comparison - A[j] < A[min]. The complexity of the algorithm is Θ(n<sup>2</sup>) and the number of key swaps is Θ(n).
+</p>
+<img class="img-responsive" src="brute/pic/Selection-Sort-Animation.gif">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

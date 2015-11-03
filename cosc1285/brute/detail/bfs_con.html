@@ -1,0 +1,24 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Breadth-First Search (BFS)</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+  <p>
+  Breadth-First Search (BFS) is graph a traversal algorithm which systematically visits each vertex and edge of a graph G.
+</p>
+<ul>
+  <li>Choose an arbitrary vertex and mark it visited.</li>
+  <li>Add the vertex to a queue.</li>
+  <li>Add each unvisited, adjacent vertex to the queue. If there are several such vertices, break the tie by imposing an ordering on the vertex labels.</li>
+  <li>Continue until the current vertex has no adjacent, unvisited vertices.</li>
+  <li>Remove the vertex from the queue.</li>
+  <li>Starting with the next remaining vertex in the queue, repeat steps 3,4, and 5.</li>
+  <li>The algorithm halts when there are no remaining vertices in the queue.</li>
+</ul>
+<img class="img-responsive" src="brute/pic/08.png">
+<img class="img-responsive" src="brute/pic/09.png">
+<img class="img-responsive" src="brute/pic/10.png">
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

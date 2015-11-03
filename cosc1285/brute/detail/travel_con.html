@@ -1,0 +1,24 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Travelling Salesman Problem</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<p>
+  Given a collection of n cities and the distance (or cost to travel) between each of them, find the shortest (cheapest) path of visiting all the cities exactly once, and returning to the starting point.
+</p>
+<ul>
+<li>The problem statement is deceptively simple, the solution is not.</li>
+<li>A polynomial solution to this problem would settle the most important open problem in computer science, the P vs NP problem, and could net you 1,000,000 dollars from the Clay mathematics institute!</li>
+<li>One of the most intensely studied problems in computational mathematics.</li>
+<li>The problem of finding the shortest Hamiltonian circuit in a weighted connected graph can be reduced to this problem.</li>
+</ul>
+<img class="img-responsive" src="brute/pic/04.png">
+<ul>
+  <li>The first step of the solution for this problem is to calculate the number of tours through n cities.</li>
+  <li>There are <b>(n − 1)!/2</b> tours assuming the direction of the tour is not important (which we did not do in the simplest solution).</li>
+  <li>To get a feel for how big the search space is for even small values of n, see <a href="http://www.tsp.gatech.edu/problem/pcb3cnt.html">http://www.tsp.gatech.edu/problem/pcb3cnt.html</a></li>
+</ul>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>
