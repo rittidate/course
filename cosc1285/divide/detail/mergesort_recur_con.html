@@ -1,0 +1,16 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Merge Sort Algorithm</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+  <img class="img-responsive" src="divide/pic/01.png">
+<ul>
+  <li>At the first level, we spend cn time</li>
+  <li>At the second level, we spend cn/2 on each subproblem, for a total of cn time.</li>
+  <li>At level j of the recursion, the number of problems has doubled j times. Each problem costs n/2j . Therefore, level j contributes at most 2j (cn/2j ) = cn time.</li>
+  <li>Summing across all the levels (of which there are log2 n), we get a total running time of Θ(n log n).</li>
+</ul>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

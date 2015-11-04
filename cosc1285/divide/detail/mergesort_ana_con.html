@@ -1,0 +1,16 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Merge Sort Algorithm - Analysis</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+
+<p>Lets set up the recurrence relationship.</p>
+<pre>
+  C(n) = 2C(n/2) + C<sub>merge</sub>(n) for n > 1, C(1) = 0.
+  C<sub>merge</sub>(n) = n − 1
+  C(n) = 2C(n/2) + n − 1 for n > 1, C(1) = 0.
+</pre>
+<p>How do we solve this recursion? There are several ways. You can use the forward/backward substitution method, use a recursion tree, or use the Master Theorem (which we will see shortly).</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

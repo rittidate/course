@@ -1,0 +1,43 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Merge Sort Algorithm</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<img class="img-responsive" src="divide/pic/Merge-sort-example-300px.gif">
+<pre>
+  MergeSort (array A) {
+    if (A.size == 0) return A
+
+    mid = A.size / 2
+    AA = MergeSort(A[0..mid])
+    BB = MergeSort(A[mid..A.size])
+
+    return MergeSort_Merge(AA, BB)
+}
+
+MergeSort_Merge (array A, array B) {
+  C = new array
+  aa = 0
+  bb = 0
+
+  while (aa < A.size and bb < B.size) {
+    if (A[aa] < B[bb]) {
+      C[] = A[aa++]
+    } else if (A[aa] > B[bb]) {
+      C[] = B[bb++]
+    } else {
+      aa += 1
+      bb += 1
+    }
+  }
+
+  while (aa < A.size) C[] = A[aa++]
+  while (bb < B.size) C[] = B[bb++]
+
+  return C
+}
+</pre>
+<img class="img-responsive" src="divide/pic/Merge_sort_algorithm_diagram.svg.png">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

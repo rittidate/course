@@ -1,0 +1,29 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">￼BST Insert</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+  <img class="img-responsive" src="decrease/pic/11.png">
+<pre>
+  bool BSTNode::add(int value) {
+      if (value == this->value)
+            return false;
+      else if (value < this->value) {
+            if (left == NULL) {
+                  left = new BSTNode(value);
+                  return true;
+            } else
+                  return left->add(value);
+      } else if (value > this->value) {
+            if (right == NULL) {
+                  right = new BSTNode(value);
+                  return true;
+            } else
+                  return right->add(value);
+      }
+      return false;
+}
+</pre>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

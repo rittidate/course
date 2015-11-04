@@ -1,0 +1,32 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">QuickHull</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+  <ul>
+    <li>￼1 Sort all points in increasing order of x and then y.</li>
+    <li>2 Choose the leftmost and rightmost point, which are a chord of the convex hull. (The points are extremal points). Call these points a and b.</li>
+    <li>3 Separate the remaining points into two sets S1 and S2. All points above ab are in S1 and all below are in S2.</li>
+    <li>4 Find the point c in S1 which is farthest from ab.</li>
+    <li>5 Discard all points inside the triangle △abc.</li>
+    <li>6 Put all points outside of ac in set S1′ .</li>
+    <li>7 Put all points outside of bc in set S2′ .</li>
+    <li>8 Run recursively on ac and bc.</li>
+    <li>9 Abort when the subset contains only the two endpoints of the current chord.</li>
+  </ul>
+
+  <img class="img-responsive" width="50%" src="divide/pic/qh01.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh02.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh03.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh04.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh05.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh06.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh07.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh08.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh09.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh10.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh11.png">
+  <img class="img-responsive" width="50%" src="divide/pic/qh12.png">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

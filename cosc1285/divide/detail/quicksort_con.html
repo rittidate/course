@@ -1,0 +1,83 @@
+<div class="modal-header modalhead_color">
+    <h3 class="modal-title">Quick Sort Algorithm</h3>
+</div>
+<div class="modal-body modal-fixed-height">
+<img class="img-responsive" src="divide/pic/Merge-sort-example-300px.gif">
+<b>Idea:</b>
+<ul>
+  <li>1 Select a key from the array for which, we hope, about half the keys
+will come before and half after. Call this key the pivot.</li>
+<li>2 Partition the array so that all keys with a value less than the pivot
+are in one subarray, and larger keys come in the other subarray.</li>
+<li>3 Recursively apply the same procedure on the two subarrays separately.</li>
+<li>4 Put all the subarrays together, and the whole array will be in sorted order.</li>
+<ul>
+<li>Quick sort does sorting in place (don’t need additional copying and temporary arrays).</li>
+<li>Quick Sort is not a stable sorting method.</li>
+</ul>
+</ul>
+
+<pre>
+ALGORITHM <b>QuickSort</b> (A[l...r])
+/* Sort a subarray using by quicksort. */
+/* I N P U T : A subarray A[l . . . r ] of A[0 . . . n − 1], defined by its left and right indices l and r. */
+/* OUTPUT : A subarray A[l...r] sorted in ascending order. */
+  <b>if</b> l < r then
+  /* s is the index to split array. */
+  s = <b>QPartition</b>(A[l . . . r ])
+  <b>QuickSort</b>(A[l . . . s − 1])
+  <b>QuickSort</b>(A[s + 1 . . . r ])
+  end if
+
+  ALGORITHM <b>QPartition</b> (A[l . . . r])
+  /* Partition a subarray using the first element as a pivot. */
+  /* INPUT : A subarray A[l . . . r] of A[0 . . . n − 1], defined by its left
+  and right indices l and r, where (l < r). */
+  /* OUTPUT : A partition of A[l . . . r], along with the index of the split position. */
+  p = A[l]
+  i = l + 1;
+  j = r;
+  <b>while</b> i ≤j do
+    <b>while</b> A[i] < p do
+      i = i + 1 /* we assume there is some check to ensure we don’t go pass r */
+    <b>end while</b>
+    <b>while</b> A[j] > p do
+      j=j−1
+    <b>end while</b>
+    <b>swap</b>(A[i ], A[j ])
+  <b>end while</b>
+  <b>swap</b>(A[i],A[j]) /* we need to reverse the last swap, which is incorrect when i and j could cross each other */
+  <b>swap</b>(A[l],A[j])
+  <b>return j</b>
+</pre>
+<img class="img-responsive" width="50%" src="divide/pic/q01.png">
+<img class="img-responsive" width="50%" src="divide/pic/q02.png">
+<img class="img-responsive" width="50%" src="divide/pic/q03.png">
+<img class="img-responsive" width="50%" src="divide/pic/q04.png">
+<img class="img-responsive" width="50%" src="divide/pic/q05.png">
+<img class="img-responsive" width="50%" src="divide/pic/q06.png">
+<img class="img-responsive" width="50%" src="divide/pic/q07.png">
+<img class="img-responsive" width="50%" src="divide/pic/q08.png">
+<img class="img-responsive" width="50%" src="divide/pic/q09.png">
+<img class="img-responsive" width="50%" src="divide/pic/q10.png">
+<img class="img-responsive" width="50%" src="divide/pic/q11.png">
+<img class="img-responsive" width="50%" src="divide/pic/q12.png">
+<img class="img-responsive" width="50%" src="divide/pic/q13.png">
+<img class="img-responsive" width="50%" src="divide/pic/q14.png">
+<img class="img-responsive" width="50%" src="divide/pic/q15.png">
+<img class="img-responsive" width="50%" src="divide/pic/q16.png">
+<img class="img-responsive" width="50%" src="divide/pic/q17.png">
+<img class="img-responsive" width="50%" src="divide/pic/q18.png">
+<img class="img-responsive" width="50%" src="divide/pic/q19.png">
+<img class="img-responsive" width="50%" src="divide/pic/q20.png">
+<img class="img-responsive" width="50%" src="divide/pic/q21.png">
+<img class="img-responsive" width="50%" src="divide/pic/q22.png">
+<img class="img-responsive" width="50%" src="divide/pic/q23.png">
+<img class="img-responsive" width="50%" src="divide/pic/q24.png">
+<img class="img-responsive" width="50%" src="divide/pic/q25.png">
+<img class="img-responsive" width="50%" src="divide/pic/q26.png">
+<img class="img-responsive" width="50%" src="divide/pic/q27.png">
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>

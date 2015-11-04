@@ -1,15 +1,15 @@
 <div class="modal-header modalhead_color">
-    <h3 class="modal-title">￼Topological Sorting</h3>
+    <h3 class="modal-title">￼Topological Sorting - DFS Method</h3>
 </div>
 <div class="modal-body modal-fixed-height">
-<p>
-Given a digraph, list its vertices in such an order that for every edge in the graph, the vertex where the edge starts is listed before the vertex where it ends. If the graph is a DAG, the topological sort has at least one solution.
-</p>
-<ul>
-  There are two different approaches to solve this problem:
-  <li><b>DFS Method</b> - Do a depth-first search. Collect the nodes in the order they are popped off of the stack. Reverse the final list.</li>
-  <li><b>Source Removal Method</b> - Arbitrarily choose a node which has no incoming edges. Delete the node and all edges and add the node to list. Repeat the check and delete process until no nodes are left.</li>
-</ul>
+<img class="img-responsive" width="50%" src="decrease/pic/dfs01.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs02.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs03.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs04.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs05.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs06.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs07.png">
+<img class="img-responsive" width="50%" src="decrease/pic/dfs08.png">
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" ng-click="ok()">OK</button>
